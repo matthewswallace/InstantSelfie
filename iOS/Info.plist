@@ -3,31 +3,61 @@
 <plist version="1.0">
 <dict>
 	<key>AWS</key>
-  <dict>
-      <key>IdentityManager</key>
-      <dict>
-          <key>Default</key>
-          <dict/>
-      </dict>
-      <key>CredentialsProvider</key>
-      <dict>
-          <key>CognitoIdentity</key>
-          <dict>
-              <key>Default</key>
-              <dict>
-                  <key>PoolId</key>
-                  <string>us-east-1:aac0b0c4-867a-4544-a1aa-60c2e8d719c8</string>
-                  <key>Region</key>
-                  <string>us-east-1</string>
-              </dict>
-          </dict>
-      </dict>
-      <key>MobileHub</key>
-      <dict>
-          <key>ProjectClientId</key>
-          <string>MobileHub 2eaf69b9-2caa-457e-ba8a-1d1ca9c92533 aws-my-sample-app-ios-swift-v0.9</string>
-      </dict>
-  </dict>
+	<dict>
+		<key>IdentityManager</key>
+		<dict>
+			<key>Default</key>
+			<dict/>
+		</dict>
+		<key>CredentialsProvider</key>
+		<dict>
+			<key>CognitoIdentity</key>
+			<dict>
+				<key>Default</key>
+				<dict>
+					<key>PoolId</key>
+					<string>us-east-1:aac0b0c4-867a-4544-a1aa-60c2e8d719c8</string>
+					<key>Region</key>
+					<string>us-east-1</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>MobileHub</key>
+		<dict>
+			<key>ProjectClientId</key>
+			<string>MobileHub 2eaf69b9-2caa-457e-ba8a-1d1ca9c92533 aws-my-sample-app-ios-swift-v0.9</string>
+		</dict>
+	</dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>amazonaws.com</key>
+			<dict>
+				<key>NSThirdPartyExceptionMinimumTLSVersion</key>
+				<string>TLSv1.0</string>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>facebook.com</key>
+			<dict>
+				<key>NSExceptionMinimumTLSVersion</key>
+				<string>TLSv1.0</string>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<true/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<false/>
+	</dict>
 	<key>CFBundleDisplayName</key>
 	<string>InstantSelfie</string>
 	<key>CFBundleName</key>

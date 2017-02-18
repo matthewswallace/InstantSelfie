@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="InstantSelfie.MyPage">
+
+	<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+		<Button Text="Login with Facebook" 
+				TextColor="White"
+				BackgroundColor="#3b5998" 
+				Clicked="Facebook_Login_Clicked"
+			/>
+	</StackLayout>
+</ContentPage>
